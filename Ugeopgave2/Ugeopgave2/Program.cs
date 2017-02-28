@@ -14,6 +14,9 @@ namespace Ugeopgave2
 
 
             MenuProgram.AddMenuItem(new MenuItem("Punkt 1", "Dette er det første punkt"));
+            MenuProgram.AddMenuItem(new MenuItem("Punkt 2", "Dette er det andet punkt"));
+            MenuProgram.AddMenuItem(new MenuItem("Punkt 3", "Dette er det tredje punkt"));
+            MenuProgram.AddMenuItem(new MenuItem("Punkt 4", "Dette er det fjerde punkt"));
 
             MenuProgram.start();
 
