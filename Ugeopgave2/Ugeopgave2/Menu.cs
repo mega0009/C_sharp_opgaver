@@ -68,7 +68,11 @@ namespace Ugeopgave2
         private void DrawMenu()
         {
             Console.Clear();
+            Console.SetCursorPosition(0, 0);
+            MenuItem current = new MenuItem("Punkt 2", "Dette er punkt 2");
+            Console.SetCursorPosition((Console.WindowWidth - MenuTitle.Length) / 2, Console.CursorTop);
             Console.WriteLine(MenuTitle);
+
             foreach (MenuItem Item in MenuList)
             {
                 Console.WriteLine(Item.Title);
