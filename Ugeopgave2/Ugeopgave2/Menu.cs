@@ -12,9 +12,9 @@ namespace Ugeopgave2
         private int selected = 0;
         public bool running { get; set; }
         public string MenuTitle;
-        MenuItem selected_Item = null;
+        MenuItemBase selected_Item = null;
         // Skal lave en Menu som en list. 
-        List<MenuItem> MenuList = new List<MenuItem>();
+        List<MenuItemBase> MenuList = new List<MenuItemBase>();
 
 
         // Laver en constructer til menutitle. 
@@ -24,8 +24,8 @@ namespace Ugeopgave2
         }
 
 
-        // AddMenuItem tager en MenuItem som parameter
-        public void AddMenuItem(MenuItem itemInput)
+        // AddMenuItem tager en MenuItemBase som parameter
+        public void AddMenuItem(MenuItemBase itemInput)
         {
             MenuList.Add(itemInput);
         }
@@ -78,7 +78,7 @@ namespace Ugeopgave2
                     Console.Write(">");
                 Console.WriteLine(MenuList[i].Title);
             }
-            // Hvis et MenuItem er valgt, printes dets titel og content. 
+            // Hvis et MenuItemBase er valgt, printes dets titel og content. 
             Console.WriteLine();
             if (selected_Item != null)
                 Console.WriteLine(selected_Item.Title + " : " + selected_Item.Content);
