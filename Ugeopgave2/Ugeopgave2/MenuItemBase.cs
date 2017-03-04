@@ -8,12 +8,16 @@ namespace Ugeopgave2
 {
    abstract class MenuItemBase
     {
-        public MenuItemBase(string title)
+        public MenuItemBase(string title, string content)
         {
             this.Title = title;
+            this.Content = content;
+
         }
 
         public virtual string Title { get; }
-        public abstract void Select();
+        public virtual string Content { get; }
+
+        //public abstract void Select();
     }
 }

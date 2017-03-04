@@ -18,12 +18,12 @@ namespace Ugeopgave2
 
 
         // Laver en constructer til menutitle. 
-        public Menu(string menutitle): base(menutitle)
+        public Menu(string menutitle) : base(menutitle,"")
         {
             MenuTitle = menutitle;
         }
 
-        public override void Select()
+       /* public override void Select()
         {
             // Dette er implementationen for Select metoden fra opgaven. 
             Menu menu = new Menu("FancyMenu");
@@ -33,7 +33,7 @@ namespace Ugeopgave2
             new MenuItem("testpunkt"),
             new MenuItem("testpunkt2")
             );
-        }
+        }*/
 
 
 
