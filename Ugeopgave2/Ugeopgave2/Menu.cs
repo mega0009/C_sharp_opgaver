@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ugeopgave2
 {
-    class Menu
+    class Menu : MenuItemBase
     {
         //private string _MenuTitle;
         private int selected = 0;
@@ -14,14 +14,27 @@ namespace Ugeopgave2
         public string MenuTitle;
         MenuItemBase selected_Item = null;
         // Skal lave en Menu som en list. 
-        List<MenuItemBase> MenuList = new List<MenuItemBase>();
+       public List<MenuItemBase> MenuList = new List<MenuItemBase>();
 
 
         // Laver en constructer til menutitle. 
-        public Menu(string menutitle)
+        public Menu(string menutitle): base(menutitle)
         {
             MenuTitle = menutitle;
         }
+
+        public override void Select()
+        {
+            // Dette er implementationen for Select metoden fra opgaven. 
+            Menu menu = new Menu("FancyMenu");
+            menu.AddMenuItem(new MenuItem("Punkt1"));
+            menu.AddMenuItem(new MenuItem("Punkt2"));
+            Menu underMenu = new Menu("undermenu",
+            new MenuItem("testpunkt"),
+            new MenuItem("testpunkt2")
+            );
+        }
+
 
 
         // AddMenuItem tager en MenuItemBase som parameter
