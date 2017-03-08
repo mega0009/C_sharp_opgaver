@@ -18,6 +18,6 @@ namespace Ugeopgave2
         public virtual string Title { get; }
         public virtual string Content { get; }
 
-        //public abstract void Select();
+        public abstract void Select();
     }
 }

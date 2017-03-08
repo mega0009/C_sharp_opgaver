@@ -11,7 +11,8 @@ namespace Ugeopgave2
         //private string _MenuTitle;
         private int selected = 0;
         public bool running { get; set; }
-        public string MenuTitle;
+        //public string MenuTitle;
+        public string MenuHeadLine;
         MenuItemBase selected_Item = null;
         // Skal lave en Menu som en list. 
        public List<MenuItemBase> MenuList = new List<MenuItemBase>();
@@ -20,7 +21,7 @@ namespace Ugeopgave2
         // Laver en constructer til menutitle. 
         public Menu(string menutitle) : base(menutitle,"")
         {
-            MenuTitle = menutitle;
+            MenuHeadLine = Title;
         }
 
        /* public override void Select()
@@ -53,9 +54,14 @@ namespace Ugeopgave2
                 // Console.ReadLine();
             } while (running);
 
-
-
         }
+
+        public override void Select()
+        {
+            start();
+        }
+
+
         private void HandleInput()
         {
             ConsoleKeyInfo cki = Console.ReadKey();
@@ -83,7 +89,7 @@ namespace Ugeopgave2
         private void DrawMenu()
         {
             Console.Clear();
-            Console.WriteLine(MenuTitle);
+            Console.WriteLine(MenuHeadLine);
             // Laver et for loop, der printer ">", som viser, hvor man befinder sig i menuen, og som printer menu titlen. 
             for (int i = 0; i < MenuList.Count; i++)
             {
