@@ -21,12 +21,12 @@ namespace Ugeopgave2
             
         }
 
-       /* public override void Select()
+        public override void Select()
         {
             // Implementation af metoden
 
            
 
-        }*/
+        }
     }
 }
